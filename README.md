@@ -1,10 +1,24 @@
-# Cloud Carbon Footprint Module
+# Terraform Module for Cloud Carbon Footprint
 
 Terraform module to deploy Cloud Carbon Footprint on Kubernetes using Helm.
 
+## Why This Matters
+
+Cloud infrastructure abstracts away the physical reality of data centres, making it easy to overlook the environmental cost of compute resources. Without visibility into carbon emissions, it's impossible to make informed decisions about sustainability.
+
+Cloud Carbon Footprint provides:
+
+* ☁️ **Multi-cloud carbon visibility** across AWS, GCP, and Azure
+* 📊 **Historical emissions tracking** to measure progress over time
+* 💰 **Cost-to-carbon correlation** showing the environmental price of spending
+* 🔍 **Recommendations** for reducing cloud carbon footprint
+* 📈 **ESG reporting data** in quantifiable metrics (kWh, metric tons CO₂e)
+
+By visualising the carbon impact of cloud usage, teams can make data-driven decisions to optimise for both cost and sustainability—turning vague environmental goals into concrete, actionable insights.
+
 ## Overview
 
-Cloud Carbon Footprint is an application that estimates the energy (kilowatt hours) and carbon emissions (metric tons CO2e) of public cloud provider utilization. Key features include:
+Cloud Carbon Footprint is an application that estimates the energy (kilowatt hours) and carbon emissions (metric tons CO2e) of public cloud provider utilisation. Key features include:
 
 - **Multi-Cloud Support**: Supports AWS, GCP, and Azure
 - **Energy & Emissions Tracking**: Monitors kilowatt hours and CO2e emissions
@@ -45,7 +59,7 @@ module "cloud_carbon_footprint" {
 
 ## Requirements
 
-- Terraform >= 1.0
+- Terraform >= 1.0 or OpenTofu >= 1.6
 - Helm >= 2.0
 - Kubernetes v1.24+
 - kubectl configured to access your cluster
@@ -182,13 +196,6 @@ kubectl port-forward -n cloud-carbon-footprint svc/cloud-carbon-footprint-client
 
 # Then open browser to http://localhost:8080
 ```
-
-## Architecture
-
-Cloud Carbon Footprint consists of two main components:
-
-1. **Client**: React-based web interface for visualizing carbon emissions data
-2. **API**: Node.js backend that queries cloud provider APIs and calculates emissions
 
 ## Configuration
 
