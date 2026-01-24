@@ -3,7 +3,7 @@ resource "helm_release" "cloud_carbon_footprint" {
   repository = "${path.module}/.upstream/helm/charts/"
   chart      = "cloud-carbon-footprint"
   version    = var.chart_version != "" ? var.chart_version : null
-  
+
   dependency_update = true
   create_namespace  = true
   namespace         = var.namespace
@@ -12,6 +12,6 @@ resource "helm_release" "cloud_carbon_footprint" {
   wait          = false
   wait_for_jobs = false
   timeout       = 30
-  
+
   values = [yamlencode(var.values)]
 }
