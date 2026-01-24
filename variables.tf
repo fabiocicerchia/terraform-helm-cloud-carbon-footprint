@@ -1,7 +1,7 @@
 variable "release_name" {
   description = "Helm release name for Cloud Carbon Footprint"
   type        = string
-  default     = "cloudcarbonfootprint"
+  default     = "cloud-carbon-footprint"
 }
 
 variable "namespace" {

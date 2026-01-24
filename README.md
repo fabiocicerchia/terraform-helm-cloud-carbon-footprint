@@ -16,10 +16,10 @@ Cloud Carbon Footprint is an application that estimates the energy (kilowatt hou
 ## Quick Start
 
 ```hcl
-module "cloudcarbonfootprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloudcarbonfootprint.git?ref=main"
+module "cloud_carbon_footprint" {
+  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
 
-  release_name    = "cloudcarbonfootprint"
+  release_name    = "cloud-carbon-footprint"
   namespace       = "cloud-carbon-footprint"
 }
 ```
@@ -28,7 +28,7 @@ module "cloudcarbonfootprint" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| `release_name` | Helm release name for Cloud Carbon Footprint | `string` | `"cloudcarbonfootprint"` | no |
+| `release_name` | Helm release name for Cloud Carbon Footprint | `string` | `"cloud-carbon-footprint"` | no |
 | `namespace` | Kubernetes namespace for Cloud Carbon Footprint | `string` | `"cloud-carbon-footprint"` | no |
 | `chart_version` | Helm chart version (empty string for latest) | `string` | `""` | no |
 | `values` | Helm values for Cloud Carbon Footprint deployment | `any` | See default values | no |
@@ -57,8 +57,8 @@ module "cloudcarbonfootprint" {
 ### Basic Deployment
 
 ```hcl
-module "cloudcarbonfootprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloudcarbonfootprint.git?ref=main"
+module "cloud_carbon_footprint" {
+  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
 
   namespace = "cloud-carbon-footprint"
 }
@@ -67,8 +67,8 @@ module "cloudcarbonfootprint" {
 ### AWS Configuration
 
 ```hcl
-module "cloudcarbonfootprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloudcarbonfootprint.git?ref=main"
+module "cloud_carbon_footprint" {
+  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
 
   namespace = "cloud-carbon-footprint"
   values = {
@@ -90,8 +90,8 @@ module "cloudcarbonfootprint" {
 ### GCP Configuration
 
 ```hcl
-module "cloudcarbonfootprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloudcarbonfootprint.git?ref=main"
+module "cloud_carbon_footprint" {
+  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
 
   namespace = "cloud-carbon-footprint"
   values = {
@@ -111,8 +111,8 @@ module "cloudcarbonfootprint" {
 ### Azure Configuration
 
 ```hcl
-module "cloudcarbonfootprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloudcarbonfootprint.git?ref=main"
+module "cloud_carbon_footprint" {
+  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
 
   namespace = "cloud-carbon-footprint"
   values = {
@@ -132,7 +132,7 @@ module "cloudcarbonfootprint" {
 ### With Ingress Enabled
 
 ```hcl
-module "cloudcarbonfootprint" {
+module "cloud_carbon_footprint" {
   source = "= "cloud-carbon-footprint"
   values = {
     client = {
@@ -161,8 +161,8 @@ module "cloudcarbonfootprint" {
 ### Pin Chart Version
 
 ```hcl
-module "cloudcarbonfootprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloudcarbonfootprint.git?ref=main"
+module "cloud_carbon_footprint" {
+  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
 
   chart_version   = "1.0.0"
 }
@@ -178,7 +178,7 @@ kubectl get pods -n cloud-carbon-footprint
 kubectl get svc -n cloud-carbon-footprint
 
 # Access the client UI (if using port-forward)
-kubectl port-forward -n cloud-carbon-footprint svc/cloudcarbonfootprint-client 8080:80
+kubectl port-forward -n cloud-carbon-footprint svc/cloud-carbon-footprint-client 8080:80
 
 # Then open browser to http://localhost:8080
 ```

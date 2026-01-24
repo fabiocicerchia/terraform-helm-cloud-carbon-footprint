@@ -1,4 +1,4 @@
-module "cloudcarbonfootprint" {
+module "cloud_carbon_footprint" {
   source = "../"
 
   release_name    = var.release_name
