@@ -17,7 +17,7 @@ Cloud Carbon Footprint is an application that estimates the energy (kilowatt hou
 
 ```hcl
 module "cloud_carbon_footprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
+  source = "fabiocicerchia/cloud-carbon-footprint/helm"
 
   release_name    = "cloud-carbon-footprint"
   namespace       = "cloud-carbon-footprint"
@@ -58,7 +58,7 @@ module "cloud_carbon_footprint" {
 
 ```hcl
 module "cloud_carbon_footprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
+  source = "fabiocicerchia/cloud-carbon-footprint/helm"
 
   namespace = "cloud-carbon-footprint"
 }
@@ -68,7 +68,7 @@ module "cloud_carbon_footprint" {
 
 ```hcl
 module "cloud_carbon_footprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
+  source = "fabiocicerchia/cloud-carbon-footprint/helm"
 
   namespace = "cloud-carbon-footprint"
   values = {
@@ -91,7 +91,7 @@ module "cloud_carbon_footprint" {
 
 ```hcl
 module "cloud_carbon_footprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
+  source = "fabiocicerchia/cloud-carbon-footprint/helm"
 
   namespace = "cloud-carbon-footprint"
   values = {
@@ -112,7 +112,7 @@ module "cloud_carbon_footprint" {
 
 ```hcl
 module "cloud_carbon_footprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
+  source = "fabiocicerchia/cloud-carbon-footprint/helm"
 
   namespace = "cloud-carbon-footprint"
   values = {
@@ -162,7 +162,7 @@ module "cloud_carbon_footprint" {
 
 ```hcl
 module "cloud_carbon_footprint" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint.git?ref=main"
+  source = "fabiocicerchia/cloud-carbon-footprint/helm"
 
   chart_version   = "1.0.0"
 }
