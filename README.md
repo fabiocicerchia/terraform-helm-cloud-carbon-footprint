@@ -203,7 +203,7 @@ kubectl port-forward -n cloud-carbon-footprint svc/cloud-carbon-footprint-client
 
 Before deploying, you need to:
 
-1. **AWS**: 
+1. **AWS**:
    - Enable Cost and Usage Reports (CUR)
    - Create an Athena database for querying billing data
    - Configure IAM permissions for accessing billing data
