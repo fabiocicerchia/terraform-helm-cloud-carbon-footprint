@@ -233,6 +233,29 @@ The API accepts various environment variables for configuration:
 - [Methodology](https://www.cloudcarbonfootprint.org/docs/methodology)
 - [GitHub Repository](https://github.com/cloud-carbon-footprint/cloud-carbon-footprint)
 
+## Make targets
+
+`make help` lists them. Every repository in this estate exposes the same eight
+verbs, so you do not have to read a Makefile to find out how to build or test it
+(FC-GEN-057).
+
+| Verb      | What it does here                                    |
+| --------- | ---------------------------------------------------- |
+| `setup`   | Install the pre-commit hook                          |
+| `install` | Download the providers this module pins              |
+| `lint`    | `pre-commit run --all-files` — the whole gate        |
+| `format`  | `terraform fmt -recursive`                           |
+| `test`    | `terraform validate` on the module and every example |
+| `analyze` | `tflint --recursive`                                 |
+
+### Not applicable
+
+Two verbs have no meaning for a Terraform module. They exit 0 and say so rather
+than pretending to work (FC-GEN-058):
+
+- `build` — nothing is compiled; the module is consumed from source.
+- `run` — a module is instantiated by a root module, never executed directly.
+
 ## License
 
 MIT
