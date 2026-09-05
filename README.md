@@ -8,11 +8,11 @@ Cloud infrastructure abstracts away the physical reality of data centres, making
 
 Cloud Carbon Footprint provides:
 
-* ☁️ **Multi-cloud carbon visibility** across AWS, GCP, and Azure
-* 📊 **Historical emissions tracking** to measure progress over time
-* 💰 **Cost-to-carbon correlation** showing the environmental price of spending
-* 🔍 **Recommendations** for reducing cloud carbon footprint
-* 📈 **ESG reporting data** in quantifiable metrics (kWh, metric tons CO₂e)
+- ☁️ **Multi-cloud carbon visibility** across AWS, GCP, and Azure
+- 📊 **Historical emissions tracking** to measure progress over time
+- 💰 **Cost-to-carbon correlation** showing the environmental price of spending
+- 🔍 **Recommendations** for reducing cloud carbon footprint
+- 📈 **ESG reporting data** in quantifiable metrics (kWh, metric tons CO₂e)
 
 By visualising the carbon impact of cloud usage, teams can make data-driven decisions to optimise for both cost and sustainability—turning vague environmental goals into concrete, actionable insights.
 
@@ -40,22 +40,22 @@ module "cloud_carbon_footprint" {
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| `release_name` | Helm release name for Cloud Carbon Footprint | `string` | `"cloud-carbon-footprint"` | no |
-| `namespace` | Kubernetes namespace for Cloud Carbon Footprint | `string` | `"cloud-carbon-footprint"` | no |
-| `chart_version` | Helm chart version (empty string for latest) | `string` | `""` | no |
-| `values` | Helm values for Cloud Carbon Footprint deployment | `any` | See default values | no |
+| Name            | Description                                       | Type     | Default                    | Required |
+| --------------- | ------------------------------------------------- | -------- | -------------------------- | :------: |
+| `release_name`  | Helm release name for Cloud Carbon Footprint      | `string` | `"cloud-carbon-footprint"` | no       |
+| `namespace`     | Kubernetes namespace for Cloud Carbon Footprint   | `string` | `"cloud-carbon-footprint"` | no       |
+| `chart_version` | Helm chart version (empty string for latest)      | `string` | `""`                       | no       |
+| `values`        | Helm values for Cloud Carbon Footprint deployment | `any`    | See default values         | no       |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| `namespace` | Kubernetes namespace where Cloud Carbon Footprint is deployed |
-| `release_name` | Helm release name of Cloud Carbon Footprint |
-| `chart_version` | Chart version of Cloud Carbon Footprint deployment |
-| `client_service_url` | Internal URL for Cloud Carbon Footprint client service |
-| `api_service_url` | Internal URL for Cloud Carbon Footprint API service |
+| Name                 | Description                                                   |
+| -------------------- | ------------------------------------------------------------- |
+| `namespace`          | Kubernetes namespace where Cloud Carbon Footprint is deployed |
+| `release_name`       | Helm release name of Cloud Carbon Footprint                   |
+| `chart_version`      | Chart version of Cloud Carbon Footprint deployment            |
+| `client_service_url` | Internal URL for Cloud Carbon Footprint client service        |
+| `api_service_url`    | Internal URL for Cloud Carbon Footprint API service           |
 
 ## Requirements
 
@@ -208,12 +208,12 @@ Before deploying, you need to:
    - Create an Athena database for querying billing data
    - Configure IAM permissions for accessing billing data
 
-2. **GCP**:
+1. **GCP**:
    - Enable Cloud Billing export to BigQuery
    - Create a service account with BigQuery access
    - Provide service account credentials
 
-3. **Azure**:
+1. **Azure**:
    - Create an Azure App Registration
    - Grant appropriate billing reader permissions
    - Provide client credentials
