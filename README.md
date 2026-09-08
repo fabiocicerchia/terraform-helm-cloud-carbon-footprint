@@ -41,7 +41,7 @@ module "cloud_carbon_footprint" {
 ## Inputs
 
 | Name            | Description                                       | Type     | Default                    | Required |
-| --------------- | ------------------------------------------------- | -------- | -------------------------- | :------: |
+| --------------- | ------------------------------------------------- | -------- | -------------------------- | -------- |
 | `release_name`  | Helm release name for Cloud Carbon Footprint      | `string` | `"cloud-carbon-footprint"` | no       |
 | `namespace`     | Kubernetes namespace for Cloud Carbon Footprint   | `string` | `"cloud-carbon-footprint"` | no       |
 | `chart_version` | Helm chart version (empty string for latest)      | `string` | `""`                       | no       |
