@@ -1,0 +1,21 @@
+# Backstage catalog entry, read by paved's scorecard plugin.
+#
+# Every check paved scores is derived from this file alone — no cluster
+# access, no CI credentials. What is absent here is absent from the score.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: terraform-helm-cloud-carbon-footprint
+  description: >-
+      Terraform module to deploy Cloud Carbon Footprint on Kubernetes using Helm.
+  annotations:
+    github.com/project-slug: fabiocicerchia/terraform-helm-cloud-carbon-footprint
+    backstage.io/source-location: url:https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint/
+  links:
+    - url: https://github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint
+      title: Source
+spec:
+  type: library
+  lifecycle: production
+  owner: group:default/kodebeat
+  system: oss-tools
