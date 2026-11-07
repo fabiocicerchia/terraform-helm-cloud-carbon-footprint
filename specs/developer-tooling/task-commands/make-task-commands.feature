@@ -28,5 +28,5 @@ Feature: Running the repository's task commands
     Given tflint is not installed
     When the contributor runs make analyze
     Then "analyze needs tflint: https://github.com/terraform-linters/tflint" is shown on the error output
-    And the command fails with exit status 69
+    And the command fails, with make reporting the check's exit status 69 as the error
     And no analysis is run

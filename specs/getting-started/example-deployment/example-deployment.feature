@@ -3,7 +3,7 @@ Feature: Deploying Cloud Carbon Footprint from the example
   Gives an operator trying the module a ready-to-apply configuration that deploys Cloud Carbon Footprint with default settings and shows where their own Helm values go.
 
   Background:
-    Given Given the operator has a Kubernetes cluster that Terraform can reach through the Helm provider
+    Given the operator has a Kubernetes cluster that Terraform can reach through the Helm provider
 
   @id:getting-started.example-deployment.001 @rule:getting-started.example.deploys-default-release @inferred @source:examples/main.tf#cloud_carbon_footprint
   Scenario: The example deploys Cloud Carbon Footprint under its default name and namespace with the latest chart
