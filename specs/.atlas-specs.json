@@ -248,7 +248,10 @@
   "terraform-helm-cloud-carbon-footprint/variables": [],
   "terraform-helm-cloud-carbon-footprint/versions": []
  },
- "retired": [],
+ "retired": [
+  "deployment.namespace-placement.001",
+  "getting-started.example-deployment.002"
+ ],
  "scenarios": {
   "compatibility.helm-provider-requirement.001": {
    "file": "specs/compatibility/helm-provider-requirement/helm-provider-requirement.feature",
@@ -286,16 +289,6 @@
    "human": false,
    "rule": "deployment.custom-configuration.values-passed-to-chart",
    "source": "variables.tf#values",
-   "status": "inferred",
-   "test": "",
-   "tests": []
-  },
-  "deployment.namespace-placement.001": {
-   "file": "specs/deployment/namespace-placement/namespace-choice.feature",
-   "fingerprint": "d654cc29df77",
-   "human": false,
-   "rule": "deployment.namespace-placement.default-namespace",
-   "source": "variables.tf#namespace",
    "status": "inferred",
    "test": "",
    "tests": []
@@ -345,16 +338,6 @@
    "fingerprint": "e7ba8dbfdb98",
    "human": false,
    "rule": "getting-started.example.deploys-default-release",
-   "source": "examples/main.tf#cloud_carbon_footprint",
-   "status": "inferred",
-   "test": "",
-   "tests": []
-  },
-  "getting-started.example-deployment.002": {
-   "file": "specs/getting-started/example-deployment/example-deployment.feature",
-   "fingerprint": "e7ba8dbfdb98",
-   "human": false,
-   "rule": "getting-started.example.no-custom-values-by-default",
    "source": "examples/main.tf#cloud_carbon_footprint",
    "status": "inferred",
    "test": "",
